@@ -585,9 +585,16 @@
             //     }
             // }
             function performSearch(){
+                if(searchInput.value === 'imc.ia'){
+                    setTimeout(function() {
+                        window.location.href = `http://ws.imc.re`;
+                    }, 1000);
+                }
+                else{
                 setTimeout(function() {
                     window.location.href = `./${searchInput.value}/${searchInput.value}.html`;
                 }, 1000);
+                }
             }
             // 保存搜索历史
             function saveToSearchHistory(query, engine) {
@@ -674,3 +681,4 @@
 </body>
 
 </html>
+
